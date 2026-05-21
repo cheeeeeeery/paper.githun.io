@@ -392,6 +392,11 @@ body {
         max-width: 100%;
     }
 
+    .section--video-bg .product-showcase {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     .section--video-bg .text-columns {
         padding-left: 5%;
         padding-right: 5%;
