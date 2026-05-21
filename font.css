@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Ortica Angular';
+    src: url('font/OrticaAngular-Bold.woff2') format('woff2'),
+        url('font/OrticaAngular-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ortica Linear';
+    src: url('font/OrticaLinear-Bold.woff2') format('woff2'),
+        url('font/OrticaLinear-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ortica Linear';
+    src: url('font/OrticaLinear-Regular.woff2') format('woff2'),
+        url('font/OrticaLinear-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ortica Linear';
+    src: url('font/OrticaLinear-Light.woff2') format('woff2'),
+        url('font/OrticaLinear-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
