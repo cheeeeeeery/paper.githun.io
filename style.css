@@ -226,12 +226,25 @@ body {
   display: block;
 }
 
+video,
+video::-webkit-media-controls,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-panel,
 video::-webkit-media-controls-start-playback-button,
 video::-webkit-media-controls-overlay-play-button,
-video::-webkit-media-controls-panel {
+video::-webkit-media-controls-play-button,
+video::-moz-media-controls,
+video::-moz-media-controls-overlay-play-button,
+video::-ms-media-controls,
+video::-ms-media-controls-play-button {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+video {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .video-wrapper {
