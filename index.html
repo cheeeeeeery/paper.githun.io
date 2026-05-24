@@ -553,16 +553,25 @@
           var btn =
             v.parentElement && v.parentElement.querySelector(".video-play-btn");
 
-          var overlay = document.createElement("div");
-          overlay.style.cssText =
-            "position:absolute;inset:0;z-index:9;background:transparent;cursor:pointer;";
-          v.parentElement.appendChild(overlay);
-          overlay.addEventListener("click", function () {
-            v.play();
-          });
-          v.addEventListener("playing", function () {
-            overlay.style.display = "none";
-          });
+          // Poster overlay: covers the browser's native centered play button entirely
+          var poster = v.getAttribute("poster");
+          var cover = null;
+          if (poster) {
+            cover = document.createElement("img");
+            cover.src = poster;
+            cover.style.cssText =
+              "position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:8;cursor:pointer;display:block;";
+            v.parentElement.appendChild(cover);
+            cover.addEventListener("click", function () {
+              v.play();
+            });
+            v.addEventListener("playing", function () {
+              cover.style.display = "none";
+            });
+            v.addEventListener("pause", function () {
+              cover.style.display = "block";
+            });
+          }
 
           var p = v.play();
           if (p && typeof p.catch === "function") {
