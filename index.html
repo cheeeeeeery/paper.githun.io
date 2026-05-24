@@ -553,6 +553,17 @@
           var btn =
             v.parentElement && v.parentElement.querySelector(".video-play-btn");
 
+          var overlay = document.createElement("div");
+          overlay.style.cssText =
+            "position:absolute;inset:0;z-index:9;background:transparent;cursor:pointer;";
+          v.parentElement.appendChild(overlay);
+          overlay.addEventListener("click", function () {
+            v.play();
+          });
+          v.addEventListener("playing", function () {
+            overlay.style.display = "none";
+          });
+
           var p = v.play();
           if (p && typeof p.catch === "function") {
             p.catch(function () {
